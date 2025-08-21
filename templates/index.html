@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clasificador de Frutas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body id="bodyBackground">
+    <div class="container">
+        <h1>🍎 Clasificador de Frutas 🍌</h1>
+
+        <div class="instructions">
+            <h3>🎯 Frutas reconocidas:</h3>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #FFFF00;"></div>Banana
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #FF0000;"></div>Fresa
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #008000;"></div>Kiwi
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #FF0000;"></div>Manzana
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #FFA500;"></div>Naranja
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #FFFF00;"></div>Piña
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #8B0000;"></div>Sandía
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #800080;"></div>Uva
+                </div>
+            </div>
+        </div>
+
+
+        <video id="userCamera" autoplay playsinline muted
+               style="width:100%; max-width:640px; border-radius:12px; box-shadow:0 0 25px rgba(0,0,0,0.3);"></video>
+
+        <canvas id="cameraCanvas" style="display:none;"></canvas>
+
+        <div class="result-box">
+            <div id="fruitImageDisplay"></div>
+            <h2>🔍 Predicción actual: <span id="predictionText">Acercando fruta...</span></h2>
+            <div class="progress-container" id="progressBars"></div>
+        </div>
+
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </div>
+</body>
+
+</html>
